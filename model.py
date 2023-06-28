@@ -29,9 +29,10 @@ class Model(pl.LightningModule):
         batch_biomed_clip = batch["biomed_clip"]
 
         seg_loss = self.lseg.training_step(batch_lseg, batch_idx)
-        adapt_loss = adapt_loss(batch_biomed_clip)
+        return seg_loss
+        # adapt_loss = adapt_loss(batch_biomed_clip)
 
-    def adapt_loss(self, batch_biomed_clip):
-        # get the image and text features from biomed clip
-        # get the image and text features from lseg
-        # compute the loss between the two
+    # def adapt_loss(self, batch_biomed_clip):
+    #     # get the image and text features from biomed clip
+    #     # get the image and text features from lseg
+    #     # compute the loss between the two

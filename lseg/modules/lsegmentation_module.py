@@ -10,7 +10,7 @@ from argparse import ArgumentParser
 
 import pytorch_lightning as pl
 
-from data import get_dataset, get_available_datasets
+from ..data import get_dataset, get_available_datasets
 
 from encoding.models import get_segmentation_model
 from encoding.nn import SegmentationLosses
